@@ -47,6 +47,9 @@ const metadata = {
       bachelor's degree from NTNU, I have a strong foundation in software development and a passion for creating innovative
       solutions.
     </Fragment>
+    <Fragment slot="email">
+      <div class="flex justify-center items-center mt-6 font-thin">Email: sebastian@soleinnovations.com</div>
+    </Fragment>
   </Hero>
 
   <!-- Content Widget **************** -->
@@ -230,8 +233,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
+      src: '~/assets/images/golf.jpg',
+      alt: 'Image of Handicappin',
     }}
     callToAction={{
       target: '_blank',
@@ -267,6 +270,10 @@ const metadata = {
         description: `The aim of this project was to practice my ML skills and explore various methods of preprocessing, feature engineering and modelling. The project is developed using <b>Python</b>, <b>scikit-learn</b>, <b>Pandas</b>, and <b>Jupyter Notebook</b>. The model is trained on historical NBA play-by-play data and uses a <b>Logistic Regression</b> to predict the win probability of the home team.`,
       },
     ]}
+    image={{
+      src: '~/assets/images/ball.jpg',
+      alt: 'Tech Design Image',
+    }}
     callToAction={{
       target: '_blank',
       text: 'View the Repo',
@@ -289,7 +296,7 @@ const metadata = {
 
   <CallToAction
     title="Let's create together"
-    subtitle="Ready to transform your vision into a reality? <br/> Email: sebastian@soleinnovations.com"
+    subtitle="Ready to transform your vision into a reality? <br/> <p>Email: sebastian@soleinnovations.com</p>"
     actions={[
       {
         variant: 'primary',
