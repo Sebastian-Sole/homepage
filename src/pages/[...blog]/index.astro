@@ -12,6 +12,7 @@ import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
 import { findImage } from '~/utils/images';
 import type { MetaData } from '~/types';
 import RelatedPosts from '~/components/blog/RelatedPosts.astro';
+import Header from '~/components/widgets/Header.astro';
 
 export const prerender = true;
 
@@ -46,6 +47,25 @@ const metadata = merge(
 ---
 
 <Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Resume', href: '#resume' },
+        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Github', href: 'https://github.com/sebastian-sole' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: 'mailto:sebastian@soleinnovations.com',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
   </SinglePost>

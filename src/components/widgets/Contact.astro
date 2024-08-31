@@ -8,11 +8,6 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline = await Astro.slots.render('tagline'),
-  inputs,
-  textarea,
-  disclaimer,
-  button,
-  description,
 
   id,
   isDark = false,
@@ -24,17 +19,65 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
-  {
+  <!-- {
     inputs && (
       <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full">
         <FormContainer
           inputs={inputs}
           textarea={textarea}
           disclaimer={disclaimer}
-          button={button}
+          button={'Send Email'}
           description={description}
         />
       </div>
     )
-  }
+  } -->
+
+  <div class="w-full max-w-sm mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+    <div class="flex flex-col items-center space-y-4 p-6">
+      <a
+        href="mailto:sebastian@soleinnovations.com"
+        class="w-full flex items-center space-x-2 justify-start p-2 hover:bg-gray-100 rounded-md"
+      >
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16 12h4M16 8h4m-8 4h4m-4-4h4m4 4v8M4 4v16h16V4H4z"></path>
+        </svg>
+        <span>sebastian@soleinnovations.com</span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/yourprofile"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full flex items-center space-x-2 justify-start p-2 hover:bg-gray-100 rounded-md"
+      >
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16 12h4M16 8h4m-8 4h4m-4-4h4m4 4v8M4 4v16h16V4H4z"></path>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+      <a
+        href="https://github.com/yourusername"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full flex items-center space-x-2 justify-start p-2 hover:bg-gray-100 rounded-md"
+      >
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16 12h4M16 8h4m-8 4h4m-4-4h4m4 4v8M4 4v16h16V4H4z"></path>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
 </WidgetWrapper>
