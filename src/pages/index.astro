@@ -292,6 +292,42 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Description:',
+        description:
+          'A <b>Neural Network</b> trained on the MNIST dataset for handwritten digit recognition using only <b>NumPy</b>.',
+      },
+      {
+        title: 'About the network:',
+        description: `I wanted to put my theoretical understanding of NN's to the test and implement a simple network from scratch using only NumPy. The network uses <b>mini-batch SGD</b>, has <b>three hidden layers</b> with ReLU, SELU and tanh activation functions, and a softmax output layer. I implemented basic <b>hyperparameter tuning</b> for the learning rate and weight initialization, and used <b>Adam</b> as an optimizer. The network achieved a test accuracy of 97.5%.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/neural-network.jpg',
+      alt: 'Neural Network Image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'View the Repo',
+      icon: 'tabler:chevron-right',
+      href: 'https://github.com/Sebastian-Sole/mnist-neural-network',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl">MNIST Neural Network in NumPy</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
