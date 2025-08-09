@@ -1,15 +1,15 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from "~/layouts/PageLayout.astro";
 
-import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import Header from "~/components/widgets/Header.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import Content from "~/components/widgets/Content.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Features from "~/components/widgets/Features.astro";
+import Steps from "~/components/widgets/Steps.astro";
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: "Personal Homepage Demo",
 };
 ---
 
@@ -17,16 +17,16 @@ const metadata = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Github', href: 'https://github.com/sebastian-sole' },
+        { text: "Home", href: "#" },
+        { text: "About", href: "#about" },
+        { text: "Resume", href: "#resume" },
+        { text: "Porfolio", href: "#porfolio" },
+        { text: "Github", href: "https://github.com/sebastian-sole" },
       ]}
       actions={[
         {
-          text: 'Hire me',
-          href: 'mailto:sebastian@soleinnovations.com',
+          text: "Hire me",
+          href: "mailto:sebastian@soleinnovations.com",
         },
       ]}
       isSticky
@@ -40,15 +40,24 @@ const metadata = {
     id="hero"
     title="Sebastian Sole"
     tagline="Personal Portfolio"
-    actions={[{ variant: 'primary', text: 'Hire me', href: 'mailto:sebastian@soleinnovations.com' }]}
+    actions={[
+      {
+        variant: "primary",
+        text: "Hire me",
+        href: "mailto:sebastian@soleinnovations.com",
+      },
+    ]}
   >
     <Fragment slot="subtitle">
-      I'm an Informatics Master's student majoring in Software Engineering. <br /> With 3 years of work experience and a
-      bachelor's degree from NTNU, I have a strong foundation in software development and a passion for creating innovative
+      I'm an Informatics Master's student majoring in Software Engineering. <br
+      /> With 3 years of work experience and a bachelor's degree from NTNU, I have
+      a strong foundation in software development and a passion for creating innovative
       solutions.
     </Fragment>
     <Fragment slot="email">
-      <div class="flex justify-center items-center mt-6 font-thin">Email: sebastian@soleinnovations.com</div>
+      <div class="flex justify-center items-center mt-6 font-thin">
+        Email: sebastian@soleinnovations.com
+      </div>
     </Fragment>
   </Hero>
 
@@ -59,43 +68,52 @@ const metadata = {
     columns={2}
     items={[
       {
-        icon: 'tabler:brand-github',
+        icon: "tabler:brand-github",
         callToAction: {
-          target: '_blank',
-          text: 'Github',
-          href: 'https://github.com/Sebastian-Sole',
+          target: "_blank",
+          text: "Github",
+          href: "https://github.com/Sebastian-Sole",
         },
       },
       {
-        icon: 'tabler:brand-linkedin',
+        icon: "tabler:brand-linkedin",
         callToAction: {
-          target: '_blank',
-          text: 'LinkedIn',
-          href: 'https://www.linkedin.com/in/sebastian-sole-ab7028235/',
+          target: "_blank",
+          text: "LinkedIn",
+          href: "https://www.linkedin.com/in/sebastian-sole-ab7028235/",
         },
       },
     ]}
     image={{
-      src: '~/assets/images/IMG_0714.JPG',
-      alt: 'Colorful Image',
-      loading: 'eager',
+      src: "~/assets/images/IMG_0714.JPG",
+      alt: "Colorful Image",
+      loading: "eager",
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        About me
+      </h2>
       <p>
-        Welcome to my personal homepage, a place to find out more about me, my work as a software developer, projects
-        and my hot takes on the latest tech trends.
+        Welcome to my personal homepage, a place to find out more about me, my
+        work as a software developer, projects and my hot takes on the latest
+        tech trends.
       </p>
       <br />
       <p>
-        I'm currently pursuing a Master's degree in Informatics at NTNU, specializing in Software Engineering. My
-        Master's thesis is focused on the development of a machine learning pipeline which creates an "Excitement Score"
-        for NBA games based on video and play-by-play data. I am constantly seeking out ways to combine my passions,
-        like sports, with my technical skills!
+        I'm currently pursuing a Master's degree in Informatics at NTNU,
+        specializing in Software Engineering. My Master's thesis is focused on
+        the development of a machine learning pipeline which creates an
+        "Excitement Score" for NBA games based on video and play-by-play data. I
+        am constantly seeking out ways to combine my passions, like sports, with
+        my technical skills!
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me here:</p>
+      <p>
+        If you're curious to dive deeper into my work, you can follow me here:
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -113,36 +131,36 @@ const metadata = {
         title:
           'Summer Intern, Full-stack Developer <br /> <span class="font-normal">Knowit Experience Oslo, Oslo, Norway</span> <br /> <span class="text-sm font-normal">Summer 2024</span>',
         description: `7-week summer internship as an IT-consultant for Comfort AS, implementing a redesign of their store page to improve user experience and sales. The technologies used include <b>Vue</b>, <b>C#</b>, <b>.Net</b>, <b>scss</b>, and <b>Azure DevOps</b>.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Full-stack Developer <br /> <span class="font-normal">Sportradar, Trondheim, Norway</span> <br /> <span class="text-sm font-normal">09/2022 - 06/2024</span>',
         description: `Development of a full-stack application, "Odds Calculation Test UI," exclusively for Sportradar developers. It employs <b>gRPC server reflection</b> to facilitate monitoring of odds calculation model shifts across development, staging, and production setups. The technology stack includes <b>Next</b>, <b>TypeScript</b>, <b>Express.js</b>, <b>Kubernetes</b>, and <b>gRPC</b> for seamless implementation, with an automated <b>CI/CD</b> pipeline. <br></br>
         Inception work for the modernization of Sportradar's core pipeline for introducing new sports. Technologies used include <b>Java</b>, <b>AWS</b>, and planning tools such as <b>Miro</b>.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Summer Intern, Full-stack Developer <br /> <span class="font-normal">Bekk Consulting, Oslo, Norway</span> <br /> <span class="text-sm font-normal">Summer 2023</span>',
         description: `7-week summer internship as an IT-consultant placed at Statens Vegvesen, developing a solution enabling entrepreneurs to access and address inspections of roadwork. The technologies used include <b>Next</b>, <b>TypeScript</b>, <b>Kotlin with Spring</b>, with automated <b>CI/CD</b> pipeline.
 `,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'TA for IT2805 course at NTNU <br /> <span class="font-normal">Faculty of Information Technology and Electrical Engineering at NTNU, Trondheim, Norway</span> <br /> <span class="text-sm font-normal">08/2022 - 12/2022</span>',
         description: `Grading and guidance for front-end web development`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
       {
         title:
           'Summer Intern, Backend Developer <br /> <span class="font-normal">Sportradar, Oslo, Norway</span> <br /> <span class="text-sm font-normal">Summer 2022</span>',
         description: `Implementation of odds calculation models and generation of weighted odds for bookmakers in <b>Java</b>, as well as development of an internal library for scheduling asynchronous tasks with cronjobs. Technologies used include Java and <b>SQL</b>.`,
-        icon: 'tabler:briefcase',
+        icon: "tabler:briefcase",
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
+    classes={{ container: "max-w-3xl" }}
   />
 
   <!-- Steps Widget ****************** -->
@@ -153,62 +171,63 @@ const metadata = {
     items={[
       {
         title: `Master of Technology in Informatics - Software Engineering <br /> <span class="font-normal">Norwegian University of Science and Technology</span> <br /> <span class="text-sm font-normal">2023 - 2025</span>`,
-        icon: 'tabler:school',
+        icon: "tabler:school",
       },
       {
         title: `Bachelor of Technology in Informatics <br /> <span class="font-normal">Norwegian University of Science and Technology</span> <br /> <span class="text-sm font-normal">2020 - 2023</span>`,
-        icon: 'tabler:school',
+        icon: "tabler:school",
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
+    classes={{ container: "max-w-3xl" }}
   />
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
+  <Features
     title="Skills"
     subtitle="Discover the proficiencies that allow me to transform ideas to reality."
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Web Development',
-        description: 'Expertise in building responsive and interactive user interfaces to address clients&apos; needs.',
+        title: "Web Development",
+        description:
+          "Expertise in building responsive and interactive user interfaces to address clients&apos; needs.",
       },
       {
-        title: 'Software Developement',
+        title: "Software Developement",
         description:
-          'Object-oriented programming, agile methodologies, version control and testing to deliver high-quality software solutions.',
+          "Object-oriented programming, agile methodologies, version control and testing to deliver high-quality software solutions.",
       },
       {
-        title: 'DevOps',
+        title: "DevOps",
         description:
-          'Experience with CI/CD pipelines, Docker, Kubernetes, and cloud services to ensure seamless deployment and scalability of applications.',
+          "Experience with CI/CD pipelines, Docker, Kubernetes, and cloud services to ensure seamless deployment and scalability of applications.",
       },
       {
-        title: 'Database Management',
+        title: "Database Management",
         description:
-          'Proficient in designing and managing databases to ensure data integrity and efficiency, specifically with SQL, ORM&apos;s.',
+          "Proficient in designing and managing databases to ensure data integrity and efficiency, specifically with SQL, ORM&apos;s.",
       },
       {
-        title: 'Data Structures and Algorithms',
+        title: "Data Structures and Algorithms",
         description:
-          'Strong foundation in data structures and algorithms to optimize code performance and solve complex problems efficiently.',
+          "Strong foundation in data structures and algorithms to optimize code performance and solve complex problems efficiently.",
       },
       {
-        title: 'Soft Skills',
+        title: "Soft Skills",
         description:
-          'Years of experience working in interdisciplinary teams, and a passion for learning, problem-solving and project management.',
+          "Years of experience working in interdisciplinary teams, and a passion for learning, problem-solving and project management.",
       },
       {
-        title: 'Machine Learning',
+        title: "Machine Learning",
         description:
-          'Experience with machine learning algorithms, data preprocessing, and model evaluation to develop predictive models and data analysis.',
+          "Experience with machine learning algorithms, data preprocessing, and model evaluation to develop predictive models and data analysis.",
       },
       {
-        title: 'UI/UX Design',
+        title: "UI/UX Design",
         description:
-          'Knowledge of design principles, user experience, and user interface design to create visually appealing and user-friendly interfaces.',
+          "Knowledge of design principles, user experience, and user interface design to create visually appealing and user-friendly interfaces.",
       },
     ]}
   />
@@ -222,30 +241,34 @@ const metadata = {
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description:
-          'Developed a web application for registering rounds of golf. As a new golfer, I was unsatisfied with the existing solutions, and the lack of transparency of how golf score and statistics are calculated. I wanted to create a solution for both new and experienced golfers to register their rounds, view statistics and easily learn about how golf score are calculated through a simple and intuitive interface.',
+          "Developed a web application for registering rounds of golf. As a new golfer, I was unsatisfied with the existing solutions, and the lack of transparency of how golf score and statistics are calculated. I wanted to create a solution for both new and experienced golfers to register their rounds, view statistics and easily learn about how golf score are calculated through a simple and intuitive interface.",
       },
       {
-        title: 'Role:',
+        title: "Role:",
         description:
-          'The sole developer, designer and product owner of the project. I developed the application using <b>Next.js</b>, <b>TypeScript</b>, <b>Tailwind CSS</b>, and <b>Supabase</b> and <b>Github CI/CD</b>. The application is hosted on <b>Vercel</b> and uses <b>Prisma ORM</b> and <b>Supabase</b> for database management and user authentication. I used a combination of <b>Figma</b> and <b>v0</b> for design and prototyping.',
+          "The sole developer, designer and product owner of the project. I developed the application using <b>Next.js</b>, <b>TypeScript</b>, <b>Tailwind CSS</b>, and <b>Supabase</b> and <b>Github CI/CD</b>. The application is hosted on <b>Vercel</b> and uses <b>Prisma ORM</b> and <b>Supabase</b> for database management and user authentication. I used a combination of <b>Figma</b> and <b>v0</b> for design and prototyping.",
       },
     ]}
     image={{
-      src: '~/assets/images/golf.jpg',
-      alt: 'Image of Handicappin',
+      src: "~/assets/images/golf.jpg",
+      alt: "Image of Handicappin",
     }}
     callToAction={{
-      target: '_blank',
-      text: 'Visit Handicappin&apos;',
-      icon: 'tabler:chevron-right',
-      href: 'https://www.handicappin.com',
+      target: "_blank",
+      text: "Visit Handicappin&apos;",
+      icon: "tabler:chevron-right",
+      href: "https://www.handicappin.com",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">Handicappin' - Golf made easy</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Project 1: <br /><span class="text-2xl"
+          >Handicappin' - Golf made easy</span
+        >
       </h3>
     </Fragment>
 
@@ -261,29 +284,33 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description:
-          'A <b>ML learning pipeline</b> that predicts the win probability of NBA games based on play-by-play data, similar to ESPN&apos;s models. This project is in WIP.',
+          "A <b>ML learning pipeline</b> that predicts the win probability of NBA games based on play-by-play data, similar to ESPN&apos;s models. This project is in WIP.",
       },
       {
-        title: 'Development:',
+        title: "Development:",
         description: `The aim of this project was to practice my ML skills and explore various methods of preprocessing, feature engineering and modelling. The project is developed using <b>Python</b>, <b>scikit-learn</b>, <b>Pandas</b>, and <b>Jupyter Notebook</b>. The model is trained on historical NBA play-by-play data and uses a <b>Logistic Regression</b> to predict the win probability of the home team.`,
       },
     ]}
     image={{
-      src: '~/assets/images/ball.jpg',
-      alt: 'Tech Design Image',
+      src: "~/assets/images/ball.jpg",
+      alt: "Tech Design Image",
     }}
     callToAction={{
-      target: '_blank',
-      text: 'View the Repo',
-      icon: 'tabler:chevron-right',
-      href: 'https://github.com/Sebastian-Sole/nba-win-probability-model',
+      target: "_blank",
+      text: "View the Repo",
+      icon: "tabler:chevron-right",
+      href: "https://github.com/Sebastian-Sole/nba-win-probability-model",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">NBA Win Probablity ML Pipeline</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Project 2: <br /><span class="text-2xl"
+          >NBA Win Probablity ML Pipeline</span
+        >
       </h3>
     </Fragment>
 
@@ -297,29 +324,33 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'Description:',
+        title: "Description:",
         description:
-          'A <b>Neural Network</b> trained on the MNIST dataset for handwritten digit recognition using only <b>NumPy</b>.',
+          "A <b>Neural Network</b> trained on the MNIST dataset for handwritten digit recognition using only <b>NumPy</b>.",
       },
       {
-        title: 'About the network:',
+        title: "About the network:",
         description: `I wanted to put my theoretical understanding of NN's to the test and implement a simple network from scratch using only NumPy. The network uses <b>mini-batch SGD</b>, has <b>three hidden layers</b> with ReLU, SELU and tanh activation functions, and a softmax output layer. I implemented basic <b>hyperparameter tuning</b> for the learning rate and weight initialization, and used <b>Adam</b> as an optimizer. The network achieved a test accuracy of 97.5%.`,
       },
     ]}
     image={{
-      src: '~/assets/images/neural-network.jpg',
-      alt: 'Neural Network Image',
+      src: "~/assets/images/neural-network.jpg",
+      alt: "Neural Network Image",
     }}
     callToAction={{
-      target: '_blank',
-      text: 'View the Repo',
-      icon: 'tabler:chevron-right',
-      href: 'https://github.com/Sebastian-Sole/mnist-neural-network',
+      target: "_blank",
+      text: "View the Repo",
+      icon: "tabler:chevron-right",
+      href: "https://github.com/Sebastian-Sole/mnist-neural-network",
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">MNIST Neural Network in NumPy</span>
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Project 3: <br /><span class="text-2xl"
+          >MNIST Neural Network in NumPy</span
+        >
       </h3>
     </Fragment>
 
@@ -335,9 +366,9 @@ const metadata = {
     subtitle="Ready to transform your vision into a reality? <br/> <p>Email: sebastian@soleinnovations.com</p>"
     actions={[
       {
-        variant: 'primary',
-        text: 'Hire me',
-        href: 'mailto:sebastian@soleinnovations.com',
+        variant: "primary",
+        text: "Hire me",
+        href: "mailto:sebastian@soleinnovations.com",
       },
     ]}
   />
