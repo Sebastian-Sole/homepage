@@ -1,0 +1,68 @@
+---
+import { Icon } from 'astro-icon/components';
+import Image from '~/components/common/Image.astro';
+---
+
+<div
+  class="w-full max-w-4xl mx-auto overflow-hidden bg-white dark:bg-slate-900 rounded-lg shadow-lg border border-gray-200 dark:border-slate-700"
+>
+  <div class="p-0">
+    <div class="flex flex-col md:flex-row">
+      <!-- Left side - Profile -->
+      <div class="bg-white/20 p-6 md:p-8 text-white flex-shrink-0 md:w-72 lg:w-80">
+        <div
+          class="flex flex-row md:flex-col items-center md:text-center text-left md:h-full md:justify-center gap-4 md:gap-0"
+        >
+          <div
+            class="h-16 w-16 md:h-24 md:w-24 md:mb-4 flex-shrink-0 rounded-full flex items-center justify-center overflow-hidden"
+          >
+            <Image
+              src="~/assets/images/IMG_2137.JPG"
+              alt="Sebastian Sole DJ"
+              class="h-full w-full object-cover rounded-full"
+              width={108}
+              height={108}
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <div class="flex-1 md:flex-none">
+            <h2 class="text-xl md:text-2xl font-bold mb-1 md:mb-2">Sebastian Sole</h2>
+            <p class="text-blue-100 mb-1 md:mb-2 text-sm md:text-base">DJ</p>
+            <div class="flex items-center gap-2 justify-start md:justify-center">
+              <Icon name="tabler:building" class="h-3 w-3 md:h-4 md:w-4" />
+              <span class="text-xs md:text-sm text-blue-100">Sole Innovations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side - Contact Info -->
+      <div class="flex-1 p-6 md:p-8">
+        <div class="h-full flex flex-col justify-center">
+          <!-- Contact Information -->
+          <div class="space-y-4">
+            <div class="grid gap-4 md:gap-5">
+              <div class="flex items-center gap-3">
+                <Icon name="tabler:mail" class="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                <span class="text-base break-all">sebastian@soleinnovations.com</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <Icon name="tabler:phone" class="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                <span class="text-base">+47 467 71 262</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <Icon name="tabler:world" class="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                <span class="text-base break-all">www.sebastiansole.com/dj</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <Icon name="tabler:map-pin" class="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                <span class="text-base">Oslo, Norway</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
